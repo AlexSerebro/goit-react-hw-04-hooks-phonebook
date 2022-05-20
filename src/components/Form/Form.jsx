@@ -1,7 +1,7 @@
 import style from './Form.module.css'
-import { useState, useEffect } from 'react'
+import { useState} from 'react'
 
-export default function Form() {
+export  function Form({onSubmit}) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -18,19 +18,16 @@ export default function Form() {
     }
   };
 
-  useEffect(() => {
-    window.localStorage.setItem('name', JSON.stringify(name))
-  }, [name]);
-
-  useEffect(() => {
-    window.localStorage.setItem('number', JSON.stringify(number))
-  }, [number]);
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, number);
+    onSubmit( name, number )
+    reset()
   };
-  
+
+  const reset = () => {
+    setName('');
+    setNumber('');
+  }; 
     return (
       <form className={style.form} onSubmit={handleSubmit}>
         <label>
@@ -58,7 +55,7 @@ export default function Form() {
             value={number}
             onChange={hendleChange}
           />
-          <button type='submit' className={style.button}>Add contact</button>
+          <button type='submit' className={style.button} >Add contact</button>
         </label>
       </form>
 

@@ -2,7 +2,8 @@ import style from "./Contacts.module.css";
 import PropTypes from 'prop-types';
 
 
-export const Contacts = ({ contacts, onDeleteContact}) => {
+export const Contacts = ({ contacts, onDeleteContact }) => {
+  // console.log(contacts);
   return (
     <>
       <div className={style.wraper}>
