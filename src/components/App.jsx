@@ -1,3 +1,6 @@
+import { PhoneBook } from "./PhoneBook";
+
+
 export const App = () => {
   return (
     <div
@@ -10,7 +13,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      <PhoneBook/>
     </div>
   );
 };

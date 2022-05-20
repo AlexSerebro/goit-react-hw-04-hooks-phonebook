@@ -1,0 +1,12 @@
+.section{
+  display: block;
+  max-width: 800px;
+  min-width: 500px;
+
+}
+
+.title{
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+}

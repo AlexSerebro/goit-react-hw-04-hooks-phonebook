@@ -1,0 +1,16 @@
+.form{
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+.text{
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+
+.input_name {
+  margin-bottom: 20px;
+  display: block;
+
+}
